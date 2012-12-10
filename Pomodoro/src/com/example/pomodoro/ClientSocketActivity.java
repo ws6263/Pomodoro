@@ -88,7 +88,7 @@ public class ClientSocketActivity  extends Activity
 			@Override
 			public void onClick(View v) {
 				try {
-					sendToBT("25");
+					sendToBT("1");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -98,7 +98,7 @@ public class ClientSocketActivity  extends Activity
 			@Override
 			public void onClick(View v) {
 				try {
-					sendToBT("5");
+					sendToBT("2");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -108,7 +108,7 @@ public class ClientSocketActivity  extends Activity
 			@Override
 			public void onClick(View v) {
 				try {
-					sendToBT("30");
+					sendToBT("3");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -133,7 +133,7 @@ public class ClientSocketActivity  extends Activity
 		}
 		str += '\n';
 		
-		String tmpStr = strTime;
+		String tmpStr = strTime; 
 		byte bytes[] = tmpStr.getBytes();
 		outputStream.write(bytes);
 	}
