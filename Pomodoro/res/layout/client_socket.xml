@@ -3,14 +3,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="#880000"
+    android:background="@drawable/tomato"
     android:padding="10dip" >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="뽀모도로 시간을 선택하세요"
-        android:textColor="#ffffff"
+        android:text="뽀모도로 시간을 선택하세요 !"
         android:layout_gravity="center"
         android:textSize="20dp" />
 
@@ -26,13 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:text="5분"
-        android:textSize="20dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="30분 "
         android:textSize="20dp" />
 
     <RelativeLayout

@@ -16,19 +16,15 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class DiscoveryActivity  extends ListActivity
 {
 	private Handler _handler = new Handler();
-	/* Get Default Adapter */
-	private BluetoothAdapter _bluetooth = BluetoothAdapter.getDefaultAdapter();
-	/* Storage the BT devices */
-	private List<BluetoothDevice> _devices = new ArrayList<BluetoothDevice>();
-	/* Discovery is Finished */
-	private volatile boolean _discoveryFinished;
+	private BluetoothAdapter _bluetooth = BluetoothAdapter.getDefaultAdapter();	/* Default Adapter */
+	private List<BluetoothDevice> _devices = new ArrayList<BluetoothDevice>();	/* Storage the BT devices */
+	private volatile boolean _discoveryFinished;	/* Discovery is Finished */
 	
 	private Runnable _discoveryWorkder = new Runnable() {
 		public void run() 
@@ -135,9 +131,10 @@ public class DiscoveryActivity  extends ListActivity
 				list.add(s);
 				
 				//MPUCAFE라는 이름의 deviceName 찾으면 바로 탐색을 종료한다.
-				if(d.getName().toString().equals("MPUCAFE"))
+				if(d.getName().toString().equals("MPUCAFE")){
 					_bluetooth.cancelDiscovery();
-				break;
+					break;
+				}
 				
 			}
 		}

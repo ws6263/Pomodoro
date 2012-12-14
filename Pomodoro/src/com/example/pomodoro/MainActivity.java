@@ -1,21 +1,15 @@
 package com.example.pomodoro;
 
 import android.app.Activity;
-import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	/* Get Default Adapter */
-	private BluetoothAdapter	_bluetooth				= BluetoothAdapter.getDefaultAdapter();
-
-	/* request BT enable */
-	private static final int	REQUEST_ENABLE			= 0x1;
-	/* request BT discover */
-	private static final int	REQUEST_DISCOVERABLE	= 0x2;
+	private static final int	REQUEST_ENABLE			= 0x1;	/* request BT enable */
+	private static final int	REQUEST_DISCOVERABLE	= 0x2;	/* request BT discover */
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
